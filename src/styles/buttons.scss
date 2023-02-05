@@ -1,0 +1,121 @@
+.control-panel__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.choose-button__wrapper {
+  border-radius: 90px;
+  width: 175px;
+  height: 40px;
+  border: none;
+  background-color: $lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.choose-button__button {
+  width: 100px;
+  height: 40px;
+  background-color: $blue;
+  border-radius: 90px;
+  border: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.4s;
+  }
+}
+
+.choose-button__sub-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 50px;
+  margin-right: 15px;
+}
+
+.choose-button__quantity {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: $black;
+  opacity: 0.8;
+  margin: 0 5px;
+}
+
+.choose-button__sub-buttons-wrapper {
+  background: none;
+  border: none;
+}
+.choose-button__minus {
+  width: 10px;
+  height: 2px;
+  background-color: $black;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.choose-button__plus {
+  background-color: $black;
+  opacity: 0.3;
+  height: 10px;
+  width: 2px;
+  position: relative;
+  left: 4px;
+  cursor: pointer;
+  &:after {
+    content: '';
+    height: 2px;
+    width: 10px;
+    background-color: $black;
+    position: absolute;
+    left: -4px;
+    top: 4px;
+  }
+}
+.choose-button__minus,
+.choose-button__plus {
+  &:hover {
+    opacity: 0.8;
+    transition: 0.4s;
+  }
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid $lightgrey;
+  cursor: pointer;
+  &:hover {
+    border-color: #ff0000;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+}
+
+.like {
+  border-color: #ff0000;
+}
+
+.active {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: $green;
+  transition: 0.5s;
+}
+
+.hide {
+  display: none;
+}

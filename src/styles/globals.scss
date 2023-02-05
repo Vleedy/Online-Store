@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import './variables';
+@import './buttons.scss';
+
+body {
+  color: $black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.container {
+  width: 94%;
+  margin: 0 auto;
+  grid-column-gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: center;
+  padding-top: 30px 0px;
+  @media (max-width: 1750px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.hit {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+  .triangle1 {
+    width: 0;
+    height: 0;
+    border-bottom: 24px solid #f23c30;
+    border-left: 20px solid transparent;
+  }
+  .square {
+    width: 24px;
+    height: 24px;
+    background-color: #f23c30;
+  }
+  .triangle2 {
+    width: 0;
+    height: 0;
+    border-top: 24px solid #d9362b;
+    border-right: 20px solid transparent;
+  }
+}

@@ -1,0 +1,44 @@
+@import './variables';
+.title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.arrow {
+  position: relative;
+  top: 20px;
+  width: 40px;
+  height: 2px;
+  background-color: $black;
+  opacity: 0.3;
+  left: 0;
+  display: block;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.2;
+  }
+}
+.arrow::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  top: -5px;
+  right: -3px;
+  background-color: $black;
+  transform: rotate(45deg);
+}
+.arrow::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  top: 5px;
+  right: -3px;
+  background-color: $black;
+  transform: rotate(-45deg);
+}
